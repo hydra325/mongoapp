@@ -49,8 +49,8 @@ app.delete('/deleteusers/:id', async (req, res) => {
 })
 
 const startServer = async () => {
-    await mongoose.connect('mongodb://127.0.0.1:27017/merndb');
-    // await mongoose.connect("mongodb+srv://admin:admin123@merncluster.zlgqdsf.mongodb.net/merndb?retryWrites=true&w=majority"); //connecting to atlas
+    // await mongoose.connect('mongodb://127.0.0.1:27017/merndb');
+    await mongoose.connect("mongodb+srv://admin:admin123@merncluster.zlgqdsf.mongodb.net/merndb?retryWrites=true&w=majority"); //connecting to atlas
     app.listen(4000, () => {
         console.log('server is ready')
     })
